@@ -31,7 +31,7 @@ export class TimeAdapter {
                 ...DateTime.TIME_SIMPLE,
                 hour12: format !== 24,
                 numberingSystem: TimeAdapter.DEFAULT_NUMBERING_SYSTEM
-            }).replace(/\u200E/g, '');
+            }).replace(/\u200E/g, '').replace(/\u202F/g, ' ');
         }
         return parsedTime.toISOTime({
             includeOffset: false,

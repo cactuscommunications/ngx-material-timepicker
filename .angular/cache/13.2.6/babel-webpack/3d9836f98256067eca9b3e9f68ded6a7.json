@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { InjectionToken } from '@angular/core';\nimport { TimeAdapter } from '../services/time-adapter';\nexport const TIME_LOCALE = new InjectionToken('TimeLocale', {\n  providedIn: 'root',\n  factory: () => TimeAdapter.DEFAULT_LOCALE\n});","map":null,"metadata":{},"sourceType":"module"}
