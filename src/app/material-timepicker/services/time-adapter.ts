@@ -43,7 +43,7 @@ export class TimeAdapter {
     static toLocaleTimeString(time: string, opts: TimeOptions = {}): string {
         const {format = TimeAdapter.DEFAULT_FORMAT, locale = TimeAdapter.DEFAULT_LOCALE} = opts;
         const hourCycle = format === 24 ? 'h23' : 'h12';
-        const timeFormat = {...DateTime.TIME_SIMPLE, hourCycle};
+        const timeFormat:any = {...DateTime.TIME_SIMPLE, hourCycle};
         const timeMask = (format === 24) ? TimeFormat.TWENTY_FOUR_SHORT : TimeFormat.TWELVE_SHORT;
 
         return DateTime.fromFormat(time, timeMask).setLocale(locale).toLocaleString(timeFormat);

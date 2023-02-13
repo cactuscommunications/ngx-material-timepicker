@@ -71,7 +71,7 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
     }
 
     @Input()
-    set min(value: string | DateTime) {
+    set min(value: any) {
         if (typeof value === 'string') {
             this._min = TimeAdapter.parseTime(value, {locale: this.locale, format: this.format});
             return;
@@ -79,12 +79,12 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
         this._min = value;
     }
 
-    get min(): string | DateTime {
+    get min(): any {
         return this._min;
     }
 
     @Input()
-    set max(value: string | DateTime) {
+    set max(value: any) {
         if (typeof value === 'string') {
             this._max = TimeAdapter.parseTime(value, {locale: this.locale, format: this.format});
             return;
@@ -92,7 +92,7 @@ export class NgxTimepickerFieldComponent implements OnInit, OnDestroy, ControlVa
         this._max = value;
     }
 
-    get max(): string | DateTime {
+    get max(): any {
         return this._max;
     }
 

@@ -33,8 +33,8 @@ export class NgxMaterialTimepickerDialComponent implements OnChanges {
     isHintVisible: boolean;
 
     @Input() editableHintTmpl: TemplateRef<Node>;
-    @Input() hour: number | string;
-    @Input() minute: number | string;
+    @Input() hour: any;
+    @Input() minute: any;
     @Input() format: number;
     @Input() period: TimePeriod;
     @Input() activeTimeUnit: TimeUnit;
